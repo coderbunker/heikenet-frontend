@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {Switch,Route} from 'react-router-dom';
-import {Home,About,SignIn,PageNotFound,ConfirmPayment} from 'pages';
+import {Home,About,SignIn,PageNotFound,ConfirmPayment,ChooseAccount,SignUpFormFreelancer,SignUpFormProject} from 'pages';
 import Navbar from 'pages/CustomNavBar';
+
+
 
 
 
@@ -15,7 +17,10 @@ class App extends Component {
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/signIn" component={SignIn}/>
-            <Route exact path="/ConfirmPayment" component={ConfirmPayment}/>
+            <Route exact path="/confirmpayment" component={ConfirmPayment}/>
+            <Route exact path="/chooseaccount" component={ChooseAccount}/>
+            <Route exact path="/signup_freelancer" component={SignUpFormFreelancer}/>
+            <Route exact path="/signup_project" component={SignUpFormProject}/>
           </div>
           <Route component={PageNotFound}/>
       </Switch>

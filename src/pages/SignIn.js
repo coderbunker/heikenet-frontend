@@ -1,42 +1,54 @@
 import React, { Component } from 'react';
 import 'styles/SignIn.scss';
-import  {BrowserRouter as Router,Route,NavLink} from 'react-router-dom';
-import SignUpFormFreelancer from 'pages/SignUpFormFreelancer';
-import SignUpFormProject from 'pages/SignUpFormProject';
-import SignInForm from 'pages/SignInForm';
-
+import  {BrowserRouter as Router,Route,Link,NavLink} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 
-class SignUp extends Component {
+
+class SignIn extends Component {
     render() {
         return (
-            <Router>
+            
             <div className="Background">
                 <div className="App__Aside">
                 <h1><Image src="assets/logo2.svg" />HeikeNet</h1>
                 </div>
-                <div className="App__Form">
+                <div className="App__Form signin">
                     {/* <div className="PageSwitcher">
                     <Link to="/signin" className="PageSwitcher__Item">Sign In</Link>
                     <Link to="/signup_freelancer" className="PageSwitcher__Item PageSwithcher__Item--Active">Sign Up</Link>
                     </div> */}
-
                     <div className="FormTitle">
-                        <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or 
-                        <NavLink exact to="/signup_project" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Sign Up</NavLink>
+                        <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> 
+                     </div>
+                     <div className="FormInput">
+                        <div className="FormCenter">
+                            <form className="FormField" onSubmit={this.handleSubmit}>
+                                <div className="FormField">
+                                    <label className="FormField__Label" htmlFor="email">Email</label>
+                                    <input type="email" id="email" className="FormField__Input" placeholder="Enter your email address" name="email" />
+                                </div>
+                            </form>
+                            <form className="FormField" onSubmit={this.handleSubmit}>
+                                <div className="FormField">
+                                    <label className="FormField__Label" htmlFor="password">Password</label>
+                                    <input type="password" id="password" className="FormField__Input" placeholder="Enter your Password" name="password" />
+                                </div>
+                            </form>
+                        </div>
+                        <div className="FormField">
+                            <button className="FormField__Button mr-20">Sign In</button>
+                            <div>
+                            <Link to="/chooseaccount" className="FormField__Link" >Create an account</Link> 
+                            </div>
+                            
                     </div>
-                    <Route exact path="/signup_freelancer" component={SignUpFormFreelancer}></Route>
-                    <Route exact path="/signup_project" component={SignUpFormProject}></Route>
-
-                    <Route exact path="/signin" component={SignInForm}>
-                    
-                        <h1>SignIn</h1>
-                    </Route>
+                </div>
+         
                 </div>
             </div>
-            </Router>
+           
         );
     }
 }
 
-export default SignUp;
+export default SignIn;

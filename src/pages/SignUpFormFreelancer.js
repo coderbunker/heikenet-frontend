@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import {DropdownButton,MenuItem} from 'react-bootstrap';
-import  {Link} from 'react-router-dom';
+import  {Link,NavLink} from 'react-router-dom';
+import 'styles/SignIn.scss';
+import {Image} from 'react-bootstrap';
 
 class SignUpFormFreelancer extends Component {
     render() {
         return (
-            
+            <div className="Background">
+                <div className="App__Aside">
+                <h1><Image src="assets/logo2.svg" />HeikeNet</h1>
+                </div>
+                <div className="App__Form">
+                <div className="FormTitle">
+                        {/* <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or  */}
+                        <NavLink exact to="/signup_freelancer" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Join As Freelancer</NavLink>
+                </div>
                  <div className="FormInput">
                         <div className="FormCenter">
                             <form className="FormField" onSubmit={this.handleSubmit}>
@@ -68,9 +78,11 @@ class SignUpFormFreelancer extends Component {
 
                         <div className="FormField">
                             <button className="FormField__Button mr-20">Sign Up</button><Link to="/signin"
-                            className="FormField__Link">I'm already member</Link>
+                            className="FormField__Link haveMember">I'm already member</Link>
                         </div>
                     </div>
+                </div>
+            </div>
                   
             
         );

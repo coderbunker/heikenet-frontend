@@ -1,5 +1,8 @@
 @import "utils";
 
+p {
+    font-size: 15px;
+}
 
 .container{
     height:80px !important;
@@ -25,8 +28,8 @@
     border-radius: none;
     color:white;
     font-size: 2em;
-    background-color:  $oc-orange-3;
-    padding: 2%;
+    
+    padding: 1.5%;
     margin-top:2%;
 }
 .btn-primary:hover{

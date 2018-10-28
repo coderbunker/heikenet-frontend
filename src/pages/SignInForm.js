@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import  {Link} from 'react-router-dom';
+
+
 class SignInForm extends Component {
     render() {
         return (
@@ -22,9 +24,7 @@ class SignInForm extends Component {
                         <div className="FormField">
                             <button className="FormField__Button mr-20">Sign In</button>
                             <div>
-                           Create an account as a <Link to="/signup_freelancer"
-                            className="FormField__Link">freelancer</Link> or <Link to="/signup_project"
-                            className="FormField__Link">project</Link>
+                            <Link to="/createaccount" className="FormField__Link">Create an account</Link> 
                             </div>
                             
                     </div>

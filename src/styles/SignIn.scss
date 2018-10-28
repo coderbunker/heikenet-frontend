@@ -16,6 +16,16 @@
     padding: 20% 15%;
 
   }
+
+  
+
+  .App__Form.signin {
+    width: 50%;
+    background-color:white;
+    padding: 10% 10%;
+    overflow: auto;
+  }
+
   
   .App__Form {
     width: 50%;
@@ -81,7 +91,7 @@
   
   .FormTitle__Link--Active {
     color: $oc-gray-8;
-    border-bottom: 1px solid #199087;
+    
   }
   
   .FormField {
@@ -153,7 +163,7 @@
     padding-bottom: 2px;
     margin-left: 5px;
   }
-  button, input, select, textarea{
+  button, input, select{
     border: none;
     padding: 10px;
     border-bottom: 1px solid #445366;
@@ -161,4 +171,8 @@
 
   textarea#projectDescription{
     border: 1px solid #445366;
+  }
+
+  a.FormField__Link.haveMember{
+    margin-left: 15px;
   }
