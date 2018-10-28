@@ -31,14 +31,36 @@
   
   .FreelancerButton{
    
-    padding: 5%;
+    padding: 10%;
     margin-bottom:10%;
+    background:#3C96FF;
+    border-radius: 8px;
+    text-align: center;
+   
+    
+  }
+
+  .FormTitle__Link__Account{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.7em;
+    margin: 0 10px;
+    padding-bottom: 5px;
   }
 
   .ProjectButton{
     
-    padding: 5%
+    padding: 10%;
+    background: #52C4B9;
+    border-radius: 8px;
+    
+    //background: #52C4B9;
+  
+    text-align: center;
   }
+
+ 
 
   .freelancer_pic{
       width:60px;

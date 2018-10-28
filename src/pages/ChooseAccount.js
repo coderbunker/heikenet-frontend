@@ -20,12 +20,12 @@ class ChooseAccount extends Component {
                 
                 
                     <div className="FreelancerButton">
-                    <NavLink to='/signup_freelancer' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link "><Image className="freelancer_pic" src="assets/crypto.svg"/>JOIN AS FREELANCER</NavLink>
+                    <NavLink to='/signup_freelancer' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">JOIN AS FREELANCER</NavLink>
                     </div>
                   
                     
                     <div className="ProjectButton">
-                    <NavLink to='/signup_project' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link "><Image className="project_pic" src="assets/crypto.svg"/>CREATE A PROJECT</NavLink>
+                    <NavLink to='/signup_project' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">CREATE A PROJECT</NavLink>
                     </div>
                     
                 </div>
