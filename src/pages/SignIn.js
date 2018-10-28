@@ -12,7 +12,7 @@ class SignIn extends Component {
                 <div className="App__Aside">
                 <h1><Image src="assets/logo2.svg" />HeikeNet</h1>
                 </div>
-                <div className="App__Form signin">
+                <div className="App__Form">
                     {/* <div className="PageSwitcher">
                     <Link to="/signin" className="PageSwitcher__Item">Sign In</Link>
                     <Link to="/signup_freelancer" className="PageSwitcher__Item PageSwithcher__Item--Active">Sign Up</Link>
