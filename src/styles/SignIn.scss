@@ -20,7 +20,7 @@
   .App__Form {
     width: 50%;
     background-color:white;
-    padding: 25px 10%;
+    padding: 5% 10%;
     overflow: auto;
   }
   
@@ -85,7 +85,7 @@
   }
   
   .FormField {
-    margin-bottom: 40px;
+    margin-bottom: 5%;
   }
   
   .FormField__Label {
@@ -124,6 +124,7 @@
     padding: 15px 70px;
     font-size: .8em;
     font-weight: 500;
+    margin-bottom: 5%;
   }
   
   .FormField__Link {
@@ -156,4 +157,8 @@
     border: none;
     padding: 10px;
     border-bottom: 1px solid #445366;
+  }
+
+  textarea#projectDescription{
+    border: 1px solid #445366;
   }
