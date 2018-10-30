@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import 'styles/SignIn.scss';
-import  {BrowserRouter as Router,Route,Link,NavLink} from 'react-router-dom';
+import  {NavLink} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 
 
 class ConfirmPayment extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+
+        }
+    }
+
+
     render() {
         return (
             
@@ -18,26 +27,20 @@ class ConfirmPayment extends Component {
                      </div>
                      <div className="FormInput_Confirm">
                         <div className="FormCenter">
-                            <form className="FormField">
+                            <form className="FormField" onSubmit={this.handleSubmit}>
                                 <div className="FormField">
                                     <label className="FormField__Label_Confirm" htmlFor="email">Project Name</label>
                                     <p>Sworps.io</p>
                                 </div>
-                            </form>
-                            <form className="FormField" >
                                 <div className="FormField">
                                     <label className="FormField__Label_Confirm" htmlFor="password">Developer Name</label>
                                     <p>Arsenii K, Denis T, Joy M</p>
                                 </div>
-                            </form>
-                            <form className="FormField">
                                 <div className="FormField">
                                     <label className="FormField__Label_Confirm" htmlFor="password">Task Done</label>
                                     <p>Node Setup, IPFS, Blockchain Cloud,</p>
                                     <p>Escrow Function, Smart Contract Audit</p>
                                 </div>
-                            </form>
-                            <form className="FormField" >
                                 <div className="FormField">
                                     <label className="FormField__Label_Confirm" htmlFor="password">Total Amount(Hours)</label>
                                     <p>$30,000 (18hours)</p>
