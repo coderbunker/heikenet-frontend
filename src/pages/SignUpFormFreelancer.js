@@ -38,12 +38,7 @@ class SignUpFormFreelancer extends Component {
         console.log('The form was submitted with the following data:');
         console.log(this.state);
 
-        
     }
-
-
-
-
     render() {
         return (
             <div className="Background">
@@ -68,23 +63,24 @@ class SignUpFormFreelancer extends Component {
                                     <input type="password" id="password" className="FormField__Input" placeholder="Enter your Password" name="password" 
                                     value={this.state.password} onChange={this.handleChange}/>
                                 </div>
-                                <div className="FormCenter Rate">
+                                
                                     <div className="FormField">
                                         <label className="FormField__Label" htmlFor="password">Rate</label>
                                         <input type="text" id="rate" className="FormField__Input Rate" placeholder="Enter your rate" name="rate" 
                                         value={this.state.rate} onChange={this.handleChange}/>
-                                    </div>
-                                            <DropdownButton
+                                    
+                                            <DropdownButton 
                                                 // bsStyle={title.toLowerCase()}
                                                 // title={title}
                                                 // key={i}
                                                 // id={`dropdown-basic-${i}`}
+                                                // onSelect={this.handlSelect}
                                                 >
-                                                <MenuItem eventKey="1">USD $</MenuItem>
-                                                <MenuItem eventKey="2">RMB $</MenuItem>
-                                                <MenuItem eventKey="3">SGD $</MenuItem>
-                                                <MenuItem eventKey="3">WON $</MenuItem>
-                                                <MenuItem eventKey="3">RUB $</MenuItem>
+                                                <MenuItem eventKey="1" >USD $</MenuItem>
+                                                <MenuItem eventKey="2" >RMB $</MenuItem>
+                                                <MenuItem eventKey="3" >SGD $</MenuItem>
+                                                <MenuItem eventKey="3" >WON $</MenuItem>
+                                                <MenuItem eventKey="3" >RUB $</MenuItem>
                                                 <MenuItem eventKey="4" active>
                                                     Active Item
                                                 </MenuItem>

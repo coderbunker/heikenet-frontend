@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'styles/SignIn.scss';
 import  {Link,NavLink} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
+import axios from 'axios';
 
 
 
@@ -34,9 +35,16 @@ class SignIn extends Component {
         console.log('The form was submitted with the following data:');
         console.log(this.state);
 
+        axios.post('https://heike-net.herokuapp.com/api/v1/login',{
+            name:this.state.email,
+            password:this.state.password,
+            
+            
+        }).then(res=>{
+            console.log(res);
+            console.log(res.data);
+        });
     }
-
-
 
     render() {
         return (
@@ -58,7 +66,7 @@ class SignIn extends Component {
                             <form className="FormField" onSubmit={this.handleSubmit}>
                                 <div className="FormField">
                                     <label className="FormField__Label" htmlFor="email">Email</label>
-                                    <input type="email" id="email" className="FormField__Input" placeholder="Enter your email address" name="email" 
+                                    <input type="text" id="email" className="FormField__Input" placeholder="Enter your email address" name="email" 
                                     value={this.state.email} onChange={this.handleChange} />
                                 </div>
                                 <div className="FormField">
@@ -67,7 +75,7 @@ class SignIn extends Component {
                                     value={this.state.password} onChange={this.handleChange} />
                                 </div>
                                  <div className="FormField">
-                                    <button className="FormField__Button mr-20">Sign In</button>
+                                    <button className="FormField__Button mr-20" type="submit">Sign In</button>
                                     <div>
                                     <Link to="/chooseaccount" className="FormField__Link" >Create an account</Link> 
                                     </div>
