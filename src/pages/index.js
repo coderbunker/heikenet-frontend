@@ -7,4 +7,5 @@ export {default as ConfirmPayment} from './ConfirmPayment';
 export {default as ChooseAccount} from './ChooseAccount';
 export {default as SignUpFormFreelancer} from './SignUpFormFreelancer';
 export {default as SignUpFormProject} from './SignUpFormProject';
+export {default as UserInfo} from './UserInfo';
 

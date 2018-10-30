@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import 'styles/SignIn.scss';
-import  {Link,NavLink} from 'react-router-dom';
+import  {Link,NavLink,Redirect} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 import axios from 'axios';
+
 
 
 
@@ -12,7 +13,8 @@ class SignIn extends Component {
 
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            redirect: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -30,7 +32,8 @@ class SignIn extends Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault();
+         e.preventDefault();
+         this.setState({redirect:true});
 
         console.log('The form was submitted with the following data:');
         console.log(this.state);
@@ -39,14 +42,27 @@ class SignIn extends Component {
             name:this.state.email,
             password:this.state.password,
             
-            
-        }).then(res=>{
+        }).then(function (res) {
             console.log(res);
-            console.log(res.data);
-        });
+            
+            if(res.data === 'ok'){
+                console.log("login success");
+                
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+            console.log('unauthorized, logging out ...');
+          });
     }
 
     render() {
+        const { redirect } = this.state;
+
+     if (redirect) {
+       return <Redirect to='/userinfo'/>;
+     }
+
         return (
             
             <div className="Background">

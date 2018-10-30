@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {DropdownButton,MenuItem} from 'react-bootstrap';
-import  {Link,NavLink} from 'react-router-dom';
+import  {Link,NavLink,Redirect} from 'react-router-dom';
 import 'styles/SignIn.scss';
 import {Image} from 'react-bootstrap';
+import axios from 'axios';
 
 class SignUpFormFreelancer extends Component {
     constructor() {
@@ -31,15 +32,39 @@ class SignUpFormFreelancer extends Component {
         });
     }
 
-    handleSubmit(e){
-        //no-reloading
+ 
+    handleSubmit(e) {
         e.preventDefault();
+        
+       console.log('The form was submitted with the following data:');
+       console.log(this.state);
+       axios.post('https://heike-net.herokuapp.com/api/v1/login',{
+        name:this.state.email,
+        password:this.state.password,
+        // need to add more data to send to the server
+        
+    }).then(function (res) {
+        console.log(res);
+        
+        if(res.data === 'ok'){
+            console.log("signup success");
+            
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        console.log('unauthorized, logging out ...');
+      });
+       
+   }
 
-        console.log('The form was submitted with the following data:');
-        console.log(this.state);
-
-    }
     render() {
+        const { redirect } = this.state;
+
+        if (redirect) {
+          return <Redirect to='/userinfo'/>;
+        }
+
         return (
             <div className="Background">
                 <div className="App__Aside">
