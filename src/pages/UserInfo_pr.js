@@ -47,14 +47,14 @@ class UserInfo_pr extends Component {
                             <Col sm="6">
                                 <Card body className="projectList">
                                 <CardTitle>Project Name : Swoprs.IO</CardTitle>
-                                <CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </CardText>
+                                <CardText>Task Done : Node Setup, IPFS, Blockchain Cloud, Create Escrow Function, Smart Contract Audit</CardText>
                                  <button className="FormField__Button_Confirm userinfo"><Link to='/confirmpayment'>Confirm Payment</Link></button>
                                 </Card>
                             </Col>
                             <Col sm="6">
                                 <Card body className="projectList">
                                 <CardTitle>Project Name : Swoprs.IO</CardTitle>
-                                <CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </CardText>
+                                <CardText>Task Done:  Create Escrow Function, Smart Contract Audit </CardText>
                                  <button className="FormField__Button_Confirm userinfo"><Link to='/confirmpayment'>Confirm Payment</Link></button>
                                 </Card>
                             </Col>
