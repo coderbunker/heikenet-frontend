@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'styles/ChooseAccount.scss';
-import  {NavLink} from 'react-router-dom';
+import  {Link, NavLink} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 
 
@@ -27,6 +27,11 @@ class ChooseAccount extends Component {
                     <div className="ProjectButton">
                     <NavLink to='/signup_project' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">CREATE A PROJECT</NavLink>
                     </div>
+
+                    <div className="FormField__Link_have_an_account">
+                    <Link to="/signin" >Already have an account</Link> 
+                    </div>
+
                     
                 </div>
                             
