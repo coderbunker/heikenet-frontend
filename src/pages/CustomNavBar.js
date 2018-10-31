@@ -20,9 +20,9 @@ class CustomNavBar extends Component {
                     <NavItem eventKey={2} componentClanss={Link} href="/about" to='/about'>
                         HeikeNet
                     </NavItem>
-                    <NavItem eventKey={2} componentClanss={Link} href="/confirmpayment" to='/confirmpayment'>
+                    {/* <NavItem eventKey={2} componentClanss={Link} href="/confirmpayment" to='/confirmpayment'>
                         Confirm Payment
-                    </NavItem>
+                    </NavItem> */}
                     <NavItem eventKey={4} componentClanss={Link} href="/signin" to='/signin'>
                         Sign In
                     </NavItem>

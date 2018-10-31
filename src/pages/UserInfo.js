@@ -50,7 +50,7 @@ class UserInfo extends Component {
                                 <div className="FormField">
                                 <label className="FormField__Label" htmlFor="wallet_address">Project List</label>
                                 </div>
-                                <div>
+                                {/* <div>
                                     <Jumbotron fluid className="projectList">
                                     <Row className="projectList">
                                         <Col sm="6">
@@ -85,7 +85,7 @@ class UserInfo extends Component {
                                         </Col>
                                         </Row>
                                     </Jumbotron>
-                                </div>
+                                </div> */}
 
 
                      {/* <div>
