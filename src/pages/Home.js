@@ -10,7 +10,7 @@ class Home extends Component {
             <Jumbotron>
             <h2>Welcome to HeikeNet</h2>
             <h3>It's decentralized freelancer place</h3>
-            <Link to='/chooseaccount'>
+            <Link to='/signup_form'>
              <Button bsStyle="primary" bsSize="large">Let's get Started</Button>
         </Link>
         </Jumbotron>

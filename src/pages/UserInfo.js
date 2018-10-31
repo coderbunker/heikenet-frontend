@@ -22,24 +22,21 @@ class UserInfo extends Component {
                     <div className="FormTitle">
                         <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">User Account Info {this.props.email}</NavLink>  
                      </div>
+
+                     <div className="FormField">
+                                    <label className="FormField__Label" >Name</label>
+                                    <Breadcrumb >
+                                    <BreadcrumbItem className="userinfo" active>Robert Dan</BreadcrumbItem>
+                                  </Breadcrumb>
+                                </div>
+
                      <div className="FormField">
                                     <label className="FormField__Label" htmlFor="email">Email</label>
                                     <Breadcrumb >
                                     <BreadcrumbItem className="userinfo" active>robert.dan@heike.net</BreadcrumbItem>
                                   </Breadcrumb>
                                 </div>
-                                <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="password">Password</label>
-                                    <button className="FormField__Button changepassword">Change Password</button>
-                                </div>
-                                
-                                    <div className="FormField">
-                                        <label className="FormField__Label" htmlFor="rate">Rate / Per Hour</label>
-                                        <Breadcrumb>
-                                        <BreadcrumbItem className="userinfo" active>500 RMB</BreadcrumbItem>
-                                        </Breadcrumb>
-                                     </div>
-                                     
+
                                 <div className="FormField">
                                     <label className="FormField__Label" htmlFor="wallet_address">Wallet Address</label>
                                     <Breadcrumb>
@@ -47,9 +44,21 @@ class UserInfo extends Component {
                                   </Breadcrumb>
                                 </div>
 
-                                <div className="FormField">
-                                <label className="FormField__Label" htmlFor="wallet_address">Project List</label>
+                                <div className="FreelancerButton">
+                                <NavLink to='/signup_freelancer' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">Create a Freelancer Profile</NavLink>
                                 </div>
+
+                                <div className="ProjectButton">
+                                <NavLink to='/signup_project' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">Create a Project</NavLink>
+                                </div>
+
+                                <div className="FormField_edit_account_info">
+                                <Link to="/signin" >Edit Account Info</Link> 
+                                </div>
+
+
+
+
                                 {/* <div>
                                     <Jumbotron fluid className="projectList">
                                     <Row className="projectList">

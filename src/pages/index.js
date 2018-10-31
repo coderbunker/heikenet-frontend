@@ -9,4 +9,5 @@ export {default as SignUpFormFreelancer} from './SignUpFormFreelancer';
 export {default as SignUpFormProject} from './SignUpFormProject';
 export {default as UserInfo} from './UserInfo';
 export {default as UserInfo_pr} from './UserInfo_pr';
+export {default as SignUpForm} from './SignUpForm';
 
