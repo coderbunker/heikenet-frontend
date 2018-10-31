@@ -31,6 +31,8 @@ class SignIn extends Component {
         });
     }
 
+
+    // if response is 'ok' then redirect
     handleSubmit(e) {
          e.preventDefault();
          this.setState({redirect:true});

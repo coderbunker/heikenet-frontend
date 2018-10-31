@@ -1,0 +1,31 @@
+.projectList.jumbotron.jumbotron-fluid {
+    background: white;
+    padding: 2% 0%;
+    height : 480px;
+}
+
+.projectList.row{
+    margin-bottom: 20px;
+    
+}
+
+.projectList.card.card-body{
+    border: 1px solid #dfdfdf;
+    padding: 3%;
+    height:240px;
+}
+
+
+button.FormField__Button.projectList.btn.btn-secondary{
+    padding: 10px 50px;
+}
+
+button.FormField__Button.changepassword{
+    padding: 10px 45px;
+    margin-bottom: 0px;
+}
+
+li.userinfo.active.breadcrumb-item{
+    color:#141414;
+    font-size: 16px;
+}
