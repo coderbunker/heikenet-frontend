@@ -34,6 +34,7 @@ class SignUpForm extends Component {
  
     handleSubmit(e) {
         e.preventDefault();
+        this.setState({redirect:true});
         
        console.log('The form was submitted with the following data:');
        console.log(this.state);
