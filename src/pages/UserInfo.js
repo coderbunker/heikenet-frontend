@@ -44,11 +44,11 @@ class UserInfo extends Component {
                                   </Breadcrumb>
                                 </div>
 
-                                <div className="FreelancerButton">
+                                <div className="FreelancerButton userinfo">
                                 <NavLink to='/signup_freelancer' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">Create a Freelancer Profile</NavLink>
                                 </div>
 
-                                <div className="ProjectButton">
+                                <div className="ProjectButton userinfo">
                                 <NavLink to='/signup_project' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">Create a Project</NavLink>
                                 </div>
 

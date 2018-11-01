@@ -56,7 +56,9 @@ class SignIn extends Component {
           .catch(function (error) {
             console.log(error);
             console.log('unauthorized, logging out ...');
-          });
+          })
+
+          .then(()=> this.setState({redirect:true}))
     }
 
     render() {

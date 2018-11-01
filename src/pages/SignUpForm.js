@@ -35,17 +35,16 @@ class SignUpForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         
-    //    console.log('The form was submitted with the following data:');
-    //    console.log(this.state);
-       axios.post('https://heike-net.herokuapp.com/api/v1/login',{
-        name:this.state.name,
-        password:this.state.password,
-        // need to add more data to send to the server
+       console.log('The form was submitted with the following data:');
+       console.log(this.state);
 
+       axios.post('https://heike-net.herokuapp.com/api/v1/login',{
+            name:this.state.name,
+            password:this.state.password,
+            // need to add more data to send to the server
     })
     
-    .then(()=> this.setState({redirect:true}))
-        
+    
     .then(function (res) {
         console.log(res);
         
@@ -58,9 +57,14 @@ class SignUpForm extends Component {
         console.log(error);
         console.log('unauthorized, logging out ...');
       })
+
+
+      /* need to fix redirect:false => true  */
+    //   .then(()=> this.setState({redirect:true}))   
+    // console.log('The form was submitted with the following data: after redirect changed');
+    // console.log(this.state);
        
    }
-
         render() {
             const { redirect } = this.state;
 
