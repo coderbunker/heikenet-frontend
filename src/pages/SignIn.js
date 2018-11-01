@@ -58,7 +58,7 @@ class SignIn extends Component {
             console.log('unauthorized, logging out ...');
           })
 
-          .then(()=> this.setState({redirect:true}))
+          
     }
 
     render() {
@@ -98,7 +98,7 @@ class SignIn extends Component {
                                  <div className="FormField">
                                     <button className="FormField__Button mr-20" type="submit">Sign In</button>
                                     <div>
-                                    <Link to="/chooseaccount" className="FormField__Link" >Create an account</Link> 
+                                    <Link to="/signup_form" className="FormField__Link" >Create an account</Link> 
                                     </div>
                                 </div>
                             </form>

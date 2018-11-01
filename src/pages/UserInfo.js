@@ -53,7 +53,7 @@ class UserInfo extends Component {
                                 </div>
 
                                 <div className="FormField_edit_account_info">
-                                <Link to="/signin" >Edit Account Info</Link> 
+                                <div><Link to="/signin" >Edit Account Info</Link></div> 
                                 </div>
 
 
