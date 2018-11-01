@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {DropdownButton,MenuItem} from 'react-bootstrap';
 import  {Link,NavLink,Redirect} from 'react-router-dom';
 import 'styles/SignIn.scss';
 import {Image} from 'react-bootstrap';
@@ -10,12 +9,12 @@ class SignUpForm extends Component {
         super();
 
         this.state = {
-            email : '',
+            name : '',
+            email:'',
             password : '',
-            rate :'',
-            currency :'',
             wallet_address :'',
-            hasAgreed: false
+            hasAgreed: false,
+            redirect: false
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -36,14 +35,18 @@ class SignUpForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         
-       console.log('The form was submitted with the following data:');
-       console.log(this.state);
+    //    console.log('The form was submitted with the following data:');
+    //    console.log(this.state);
        axios.post('https://heike-net.herokuapp.com/api/v1/login',{
-        name:this.state.email,
+        name:this.state.name,
         password:this.state.password,
         // need to add more data to send to the server
+
+    })
+    
+    .then(()=> this.setState({redirect:true}))
         
-    }).then(function (res) {
+    .then(function (res) {
         console.log(res);
         
         if(res.data === 'ok'){
@@ -54,16 +57,17 @@ class SignUpForm extends Component {
       .catch(function (error) {
         console.log(error);
         console.log('unauthorized, logging out ...');
-      });
+      })
        
    }
 
-    render() {
-        const { redirect } = this.state;
+        render() {
+            const { redirect } = this.state;
 
         if (redirect) {
-          return <Redirect to='/userinfo'/>;
+        return <Redirect to='/userinfo'/>;
         }
+        
 
         return (
             <div className="Background">
@@ -79,8 +83,8 @@ class SignUpForm extends Component {
                         <div className="FormCenter">
                                 <div className="FormField">
                                     <label className="FormField__Label" htmlFor="password">Name</label>
-                                    <input type="password" id="wallet_address" className="FormField__Input" placeholder="Enter your full name" 
-                                    name="wallet_address" value={this.state.wallet_address} onChange={this.handleChange}/>
+                                    <input type="text" id="name" className="FormField__Input" placeholder="Enter your full name" 
+                                    name="name" value={this.state.name} onChange={this.handleChange}/>
                                 </div>
 
                             <form className="FormField" onSubmit={this.handleSubmit} >
@@ -108,9 +112,8 @@ class SignUpForm extends Component {
                                 </div>
 
                                 <div className="FormField">
-                                <NavLink to='/userinfo' className="FormField__Button mr-20">Sign Up</NavLink>
-                                    <Link to="/signin"
-                                    className="FormField__Link haveMember">I'm already member</Link>
+                                <button className="FormField__Button mr-20" type="submit">Sign Up</button>
+                                <Link to="/signin" className="FormField__Link haveMember">I'm already member</Link>
                                 </div>
                         </form>
                     </div>

@@ -44,6 +44,7 @@ class SignIn extends Component {
             name:this.state.email,
             password:this.state.password,
             
+            
         }).then(function (res) {
             console.log(res);
             

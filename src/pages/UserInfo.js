@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'styles/UserInfo.scss';
 import {Image} from 'react-bootstrap';
-import { Jumbotron, Button,Card, CardText, CardTitle,Row,Col,Breadcrumb,BreadcrumbItem} from 'reactstrap';
+import { Breadcrumb,BreadcrumbItem} from 'reactstrap';
 import  {Link,NavLink} from 'react-router-dom';
 
 
@@ -30,7 +30,7 @@ class UserInfo extends Component {
                                   </Breadcrumb>
                                 </div>
 
-                     <div className="FormField">
+                             <div className="FormField">
                                     <label className="FormField__Label" htmlFor="email">Email</label>
                                     <Breadcrumb >
                                     <BreadcrumbItem className="userinfo" active>robert.dan@heike.net</BreadcrumbItem>
