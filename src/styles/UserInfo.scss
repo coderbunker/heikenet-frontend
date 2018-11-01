@@ -33,3 +33,18 @@ li.userinfo.active.breadcrumb-item{
 button.FormField__Button_Confirm.userinfo{
     padding: 10px 45px;
 }
+
+.FreelancerButton{
+    padding:2%;
+    margin-bottom:5%;
+    &:hover{
+        background: #0074fa;
+    }
+}
+
+.ProjectButton {
+    padding: 2%;
+    &:hover{
+        background: #00c5b2;
+    }
+}
