@@ -17,7 +17,7 @@ p {
     height:600px;
     background-color: #364fc7;
     padding: 7% 15%;
-    font-weight: 600;
+    font-weight: 550;
     
 
 
@@ -36,7 +36,8 @@ p {
     margin-right: auto;
     
     padding: 1.5%;
-    margin-top:2%;
+    margin-top:5%;
+
 }
 .btn-primary:hover{
     background-color: $oc-orange-3;
@@ -47,10 +48,17 @@ p {
 }
 
 .function-pic{
-    width:30%;
+  width: 200px;
+  height: 200px;
+  display: inline;
+  margin-left: 27%;    
+  margin-right: auto;
+
 }
 
+
 h2{
+    margin-top: 1.2em;
     font-size: 4em;
     font-weight: 500;
     color: white;
@@ -58,6 +66,7 @@ h2{
 }
 
 h3{
+    margin-top: 1.1em;
     margin-bottom: 1em;
     color:white;
     text-align: center;
