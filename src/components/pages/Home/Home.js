@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-            <Jumbotron>
+        <Jumbotron>
             <h2>Welcome to the Internet of Work</h2>
             <h3><br></br>Heike network is a peer-to-peer workplace
             <br></br>where projects meet coders</h3>
@@ -16,12 +16,11 @@ class Home extends Component {
         </Link>
         </Jumbotron>
          
-            <div >
+            <div className="lower-div">
 
             <Image src="assets/start.svg" className="function-pic"/>
 
             <Image src="assets/management.svg" className="function-pic"/>
-
 
             </div>
 

@@ -11,8 +11,8 @@ p {
 }
 
 .jumbotron{
-    margin-bottom: 4em;
-    margin-top: -2em;
+/*    margin-bottom: 4em;
+*/    margin-top: -2em;
     width:100%;
     height:600px;
     background-color: #364fc7;
@@ -48,11 +48,21 @@ p {
 }
 
 .function-pic{
+  margin-top: 5em;
+
   width: 200px;
   height: 200px;
   display: inline;
   margin-left: 27%;    
   margin-right: auto;
+
+}
+
+.lower-div{
+    margin-top: -2.2em;
+    height:600px;
+
+    background-color: #dbe4ff;
 
 }
 
