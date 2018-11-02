@@ -33,10 +33,7 @@ class SignIn extends Component {
                 <NavLink to='/create_project' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">Create Project Project</NavLink>
                 </div>
 
-                <div className="FormField__Link_have_an_account">
-                <Link to="/signin" >Already have an account</Link> 
-                </div>
-
+                
                 
             </div>
                         
