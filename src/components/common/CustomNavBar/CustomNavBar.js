@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {Navbar,Nav,NavItem,Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import '../styles/CustomNavBar.scss';
+import './CustomNavBar.scss';
 
 class CustomNavBar extends Component {
     render() {
         return (
            <Navbar default collapseOnSelect>
-            <Navbar.Header>
+            <Navbar.Header className="header">
                 <Navbar.Brand>
                     <Link to="/"><Image src="assets/logo.svg" /> HeikeNet</Link>
                 </Navbar.Brand>

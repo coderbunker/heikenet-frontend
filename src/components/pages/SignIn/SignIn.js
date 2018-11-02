@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'styles/SignIn.scss';
+import './SignIn.scss';
 import  {Link,NavLink,Redirect} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 import axios from 'axios';
@@ -65,7 +65,7 @@ class SignIn extends Component {
         const { redirect } = this.state;
 
      if (redirect) {
-       return <Redirect to='/userinfo'/>;
+       return <Redirect to='/dashboard'/>;
      }
 
         return (
@@ -98,7 +98,7 @@ class SignIn extends Component {
                                  <div className="FormField">
                                     <button className="FormField__Button mr-20" type="submit">Sign In</button>
                                     <div>
-                                    <Link to="/signup_form" className="FormField__Link" >Create an account</Link> 
+                                    <Link to="/signup" className="FormField__Link" >Create an account</Link> 
                                     </div>
                                 </div>
                             </form>

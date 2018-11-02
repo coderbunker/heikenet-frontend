@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import  {Link,NavLink} from 'react-router-dom';
-import 'styles/SignIn.scss';
+import './CreateProject.scss';
 import {Image} from 'react-bootstrap';
 
-class SignUpFormProject extends Component {
+class CreateProject extends Component {
     constructor(){
         super();
 
         this.state = {
-            name : '',
-            email : '',
-            password : '',
+            company : '',
             projectName : '',
             projectDescription :'',
-            hasAgreed: false
+            budget: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -49,46 +47,36 @@ class SignUpFormProject extends Component {
                 <div className="App__Form">
                 <div className="FormTitle">
                         {/* <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or  */}
-                        <NavLink exact to="/signup_project" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Create A Project</NavLink>
+                        <NavLink exact to="/signup_project" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Create A Project Account</NavLink>
                 </div>
                  <div className="FormInput">
                         <div className="FormCenter">
                             <form className="FormField" onSubmit={this.handleSubmit}>
                                 <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="name">Name</label>
-                                    <input type="text" id="name" className="FormField__Input" placeholder="Enter your fullname" name="name" 
+                                    <label className="FormField__Label" htmlFor="name">Company Name</label>
+                                    <input type="text" id="company" className="FormField__Input" placeholder="Enter your company name" name="company" 
                                     value={this.state.name} onChange={this.handleChange}/>
                                 </div>
-                                <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="email">Email</label>
-                                    <input type="email" id="email" className="FormField__Input" placeholder="Enter your email address" name="email" 
-                                    value={this.state.email} onChange={this.handleChange}/>
-                                </div>
-                                <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="password">Password</label>
-                                    <input type="password" id="password" className="FormField__Input" placeholder="Enter your Password" name="password" 
-                                    value={this.state.password} onChange={this.handleChange}/>
-                                </div>
-                                <div className="FormField">
+                                 <div className="FormField">
                                     <label className="FormField__Label" htmlFor="projectName">Project Name</label>
                                     <input type="text" id="projectName" className="FormField__Input" placeholder="Enter your Project Name" name="projectName" 
                                     value={this.state.projectName} onChange={this.handleChange}/>
                                 </div>
+                              
                                 <div className="FormField desc">
                                     <label className="FormField__Label" htmlFor="projectName">Project Description</label>
                                     <textarea rows="3" cols="50" type="text" id="projectDescription" className="FormField__Input" placeholder="Describe your Project" name="projectDescription" 
                                     value={this.state.projectDescription} onChange={this.handleChange}/>
                                 </div>
+                             
                                 <div className="FormField">
-                                <label className="FormField__CheckboxLabel">
-                                    <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange}/>
-                                    I agree all statement in <Link to="#" href="" className="FormField__TermsLink">terms of service</Link>
-                                </label>
+                                        <label className="FormField__Label" htmlFor="password">Monthly Budget</label>
+                                        <input type="text" id="budget" className="FormField__Input Budget" placeholder="Enter your Budget" name="budget" 
+                                        value={this.state.budget} onChange={this.handleChange}/>
                                 </div>
 
-                                <div className="FormField">
-                                    <button className="FormField__Button mr-20">Sign Up</button><Link to="/signin"
-                                    className="FormField__Link haveMember">I'm already member</Link>
+                                 <div className="FormField">
+                                <Link to="/dashboard"><button className="FormField__Button submit_form" type="submit">Submit Form</button></Link>
                                 </div>
                             </form>
                           </div>
@@ -99,4 +87,4 @@ class SignUpFormProject extends Component {
     }
 }
 
-export default SignUpFormProject;
+export default CreateProject;
