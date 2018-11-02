@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {DropdownButton,MenuItem} from 'react-bootstrap';
 import  {Link,NavLink,Redirect} from 'react-router-dom';
-import 'styles/SignIn.scss';
+import './CreateFreelancer.scss';
 import {Image} from 'react-bootstrap';
 import axios from 'axios';
 
-class SignUpFormFreelancer extends Component {
+class CreateFreelancer extends Component {
     constructor() {
         super();
 
@@ -62,7 +62,7 @@ class SignUpFormFreelancer extends Component {
         const { redirect } = this.state;
 
         if (redirect) {
-          return <Redirect to='/userinfo'/>;
+          return <Redirect to='/dashboard'/>;
         }
 
         return (
@@ -73,20 +73,15 @@ class SignUpFormFreelancer extends Component {
                 <div className="App__Form">
                 <div className="FormTitle">
                         {/* <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or  */}
-                        <NavLink exact to="/signup_freelancer" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Join As Freelancer</NavLink>
+                        <NavLink exact to="/signup_freelancer" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Create Freelancer Account</NavLink>
                 </div>
                  <div className="FormInput">
                         <div className="FormCenter">
                             <form className="FormField" onSubmit={this.handleSubmit} >
                                 <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="email">Email</label>
-                                    <input type="email" id="email" className="FormField__Input" placeholder="Enter your email address" name="email" 
-                                    value={this.state.email} onChange={this.handleChange}/>
-                                </div>
-                                <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="password">Password</label>
-                                    <input type="password" id="password" className="FormField__Input" placeholder="Enter your Password" name="password" 
-                                    value={this.state.password} onChange={this.handleChange}/>
+                                    <label className="FormField__Label" htmlFor="password">Wallet Address</label>
+                                    <input type="password" id="wallet_address" className="FormField__Input" placeholder="Enter your Wallet Address" 
+                                    name="wallet_address" value={this.state.wallet_address} onChange={this.handleChange}/>
                                 </div>
                                 
                                     <div className="FormField">
@@ -111,22 +106,14 @@ class SignUpFormFreelancer extends Component {
                                                 </MenuItem>
                                         
                                             </DropdownButton>
-                                 </div>
-                                <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="password">Wallet Address</label>
-                                    <input type="password" id="wallet_address" className="FormField__Input" placeholder="Enter your Wallet Address" 
-                                    name="wallet_address" value={this.state.wallet_address} onChange={this.handleChange}/>
-                                </div>
-                                 <div className="FormField">
-                                    <label className="FormField__CheckboxLabel">
-                                        <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.value} onChange={this.handleChange}/>
-                                        I agree all statement in <Link to="#"href="#" className="FormField__TermsLink">terms of service</Link>
-                                    </label>
-                                </div>
+                                    </div>
+                               <div>
+                               <label className="FormField__Label" htmlFor="Profile">Profile</label>
+                               <Link to="#" className=""><button className="FormField__Button profile_link">Coderbunker Profile</button></Link>
+                               </div>
 
                                 <div className="FormField">
-                                    <button className="FormField__Button mr-20">Sign Up</button><Link to="/signin"
-                                    className="FormField__Link haveMember">I'm already member</Link>
+                                <Link to="/dashboard"><button className="FormField__Button submit_form" type="submit">Submit Form</button></Link>
                                 </div>
                         </form>
                     </div>
@@ -138,4 +125,4 @@ class SignUpFormFreelancer extends Component {
     }
 }
 
-export default SignUpFormFreelancer;
+export default CreateFreelancer;

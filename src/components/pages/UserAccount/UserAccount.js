@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import 'styles/UserInfo.scss';
+import './UserAccount.scss';
 import {Image} from 'react-bootstrap';
 import { Breadcrumb,BreadcrumbItem} from 'reactstrap';
 import  {Link,NavLink} from 'react-router-dom';
 
 
 
-class UserInfo extends Component {
+class UserAccount extends Component {
     
     render() {
         return (
@@ -44,16 +44,16 @@ class UserInfo extends Component {
                                   </Breadcrumb>
                                 </div>
 
-                                <div className="FreelancerButton">
+                                <div className="FreelancerButton userinfo">
                                 <NavLink to='/signup_freelancer' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">Create a Freelancer Profile</NavLink>
                                 </div>
 
-                                <div className="ProjectButton">
+                                <div className="ProjectButton userinfo">
                                 <NavLink to='/signup_project' activeClassName="FormTitle__Link_Choosetype--Active" className="FormTitle__Link__Account ">Create a Project</NavLink>
                                 </div>
 
                                 <div className="FormField_edit_account_info">
-                                <Link to="/signin" >Edit Account Info</Link> 
+                                <div><Link to="/signin" >Edit Account Info</Link></div> 
                                 </div>
 
 
@@ -109,4 +109,4 @@ class UserInfo extends Component {
     }
 }
 
-export default UserInfo;
+export default UserAccount;

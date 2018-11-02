@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Grid,Col,Image,Row} from 'react-bootstrap';
-import 'styles/About.scss';
+import './About.scss';
 
 class About extends Component {
     render() {
