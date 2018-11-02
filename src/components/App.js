@@ -23,7 +23,10 @@ class App extends Component {
             <Route exact path="/create_freelancer" component={CreateFreelancer}/>
             <Route exact path="/create_project" component={CreateProject}/>
             <Route exact path="/user_account" component={UserAccount}/>
+<<<<<<< HEAD
             
+=======
+>>>>>>> 8f45f1ddac5406a04a317a07ddd4b25b5d43fe75
           </div>
           <Route component={PageNotFound}/>
       </Switch>
