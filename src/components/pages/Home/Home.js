@@ -16,17 +16,18 @@ class Home extends Component {
         </Link>
         </Jumbotron>
          
-            <div className="lower-div">
 
-            <Image src="assets/start.svg" className="function-pic"/>
-
-            <Image src="assets/management.svg" className="function-pic"/>
-
-            </div>
-
-            </div>
+            </div> 
         ); 
     }
 }
 
 export default Home;
+
+
+            // <div className="lower-div">
+
+            // <Image src="assets/start.svg" className="function-pic"/> 
+
+            // <Image src="assets/management.svg" className="function-pic"/> 
+            // </div>
