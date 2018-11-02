@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Jumbotron,Grid,Row,Col,Image,Button} from 'react-bootstrap';
-import 'styles/Home.scss';
+import './Home.scss';
 
 class Home extends Component {
     render() {
@@ -10,7 +10,7 @@ class Home extends Component {
             <Jumbotron>
             <h2>Welcome to HeikeNet</h2>
             <h3>It's decentralized freelancer place</h3>
-            <Link to='/signup_form'>
+            <Link to='/signup'>
              <Button bsStyle="primary" bsSize="large">Let's get Started</Button>
         </Link>
         </Jumbotron>

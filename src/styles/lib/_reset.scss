@@ -1,7 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Archivo+Black|Quicksand:400,500,700|Roboto+Condensed:400,400i,700");
-
-
-
 body {
   margin: 0;
   box-sizing: border-box;
@@ -19,6 +15,16 @@ code {
   font-family: 'Archivo Black', sans-serif;
 }
 
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
 
 a:focus, a:hover{
   text-decoration: none !important;

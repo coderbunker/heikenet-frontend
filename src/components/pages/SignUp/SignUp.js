@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import  {Link,NavLink,Redirect} from 'react-router-dom';
-import 'styles/SignIn.scss';
+import './SignUp.scss';
 import {Image} from 'react-bootstrap';
 import axios from 'axios';
 
-class SignUpForm extends Component {
+class SignUp extends Component {
     constructor() {
         super();
 
@@ -12,7 +12,6 @@ class SignUpForm extends Component {
             name : '',
             email:'',
             password : '',
-            wallet_address :'',
             hasAgreed: false,
             redirect: false
         }
@@ -70,7 +69,7 @@ class SignUpForm extends Component {
             const { redirect } = this.state;
 
         if (redirect) {
-        return <Redirect to='/userinfo'/>;
+        return <Redirect to='/choose_account'/>;
         }
         
 
@@ -104,11 +103,11 @@ class SignUpForm extends Component {
                                     value={this.state.password} onChange={this.handleChange}/>
                                 </div>
                                 
-                                <div className="FormField">
+                                {/* <div className="FormField">
                                     <label className="FormField__Label" htmlFor="password">Wallet Address</label>
                                     <input type="password" id="wallet_address" className="FormField__Input" placeholder="Enter your Wallet Address" 
                                     name="wallet_address" value={this.state.wallet_address} onChange={this.handleChange}/>
-                                </div>
+                                </div> */}
                                  <div className="FormField">
                                     <label className="FormField__CheckboxLabel">
                                         <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.value} onChange={this.handleChange}/>
@@ -130,4 +129,4 @@ class SignUpForm extends Component {
     }
 }
 
-export default SignUpForm;
+export default SignUp;

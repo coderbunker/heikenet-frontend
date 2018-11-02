@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import 'styles/UserInfo.scss';
+import './UserAccount.scss';
 import {Image} from 'react-bootstrap';
 import { Breadcrumb,BreadcrumbItem} from 'reactstrap';
 import  {Link,NavLink} from 'react-router-dom';
 
 
 
-class UserInfo extends Component {
+class UserAccount extends Component {
     
     render() {
         return (
@@ -109,4 +109,4 @@ class UserInfo extends Component {
     }
 }
 
-export default UserInfo;
+export default UserAccount;

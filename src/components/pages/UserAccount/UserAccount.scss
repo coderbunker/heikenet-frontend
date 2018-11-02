@@ -28,17 +28,7 @@
     padding: 7% 10%;
     overflow: auto;
   }
-  
-  .FreelancerButton{
-   
-    padding: 10%;
-    margin-bottom:10%;
-    background:#3C96FF;
-    border-radius: 8px;
-    text-align: center;
-   
-    
-  }
+
 
   .FormTitle__Link__Account{
     color: #ffffff;
@@ -49,16 +39,7 @@
     padding-bottom: 5px;
   }
 
-  .ProjectButton{
-    
-    padding: 10%;
-    background: #52C4B9;
-    border-radius: 8px;
-    
-    //background: #52C4B9;
-  
-    text-align: center;
-  }
+
 
  
 
@@ -106,17 +87,12 @@
     
   }
 
-  .FormField__Link_have_an_account{
-    margin-top: 30px;
-    border-bottom: 1px solid #225E62;
-    width: 30%;
-  }
 
   .FormField_edit_account_info{
     margin-top: 30px;
-    margin-left: 230px;
     border-bottom: 1px solid #225E62;
-    width: 20%;
+    display: flex;
+    justify-content: center;
   }
 
 
@@ -166,24 +142,5 @@ button.FormField__Button_Confirm.userinfo{
     padding: 10px 45px;
 }
 
-.FreelancerButton{
-    padding:2%;
-    margin-bottom:5%;
-    &:hover{
-        background: #0074fa;
-    }
-}
+  
 
-.ProjectButton {
-    padding: 2%;
-    &:hover{
-        background: #00c5b2;
-    }
-}
-
-
-.FormField_edit_account_info{
-    margin-top: 30px;
-    border-bottom: 1px solid #225E62;
-   
-  }
