@@ -23,9 +23,6 @@ class SignIn extends Component {
              </div>
             <div className="App__AccountForm">
             
-            
-               
-
                 <div className="FormField__Link_Home">
                 <Link to="#" >Move to Home Page</Link> 
                 </div>
