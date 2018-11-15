@@ -40,23 +40,15 @@ class SignIn extends Component {
         console.log('The form was submitted with the following data:');
         console.log(this.state);
 
-        axios.post('https://heike-net.herokuapp.com/api/v1/login',{
-            name:this.state.email,
+        axios.post('https://heikenet-backend.herokuapp.com/api/v1/login',{
+            email:this.state.email,
             password:this.state.password,
             
             
-        }).then(function (res) {
-            console.log(res);
-            
-            if(res.data === 'ok'){
-                console.log("login success");
-                
-            }
-          })
-          .catch(function (error) {
-            console.log(error);
-            console.log('unauthorized, logging out ...');
-          })
+    }).then(function (res) {
+                console.log(res);
+                console.log(res.data);
+            })
 
           
     }
