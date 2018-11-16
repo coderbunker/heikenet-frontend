@@ -88,7 +88,7 @@ class CreateFreelancer extends Component {
                                         <label className="FormField__Label" htmlFor="password">Rate</label>
                                         <input type="text" id="rate" className="FormField__Input Rate" placeholder="Enter your rate" name="rate" 
                                         value={this.state.rate} onChange={this.handleChange}/>
-                                    
+{/*                                     
                                             <DropdownButton 
                                                 // bsStyle={title.toLowerCase()}
                                                 // title={title}
@@ -96,8 +96,8 @@ class CreateFreelancer extends Component {
                                                 // id={`dropdown-basic-${i}`}
                                                 // onSelect={this.handlSelect}
                                                 >
-                                                <MenuItem eventKey="1" >USD $</MenuItem>
-                                                <MenuItem eventKey="2" >RMB $</MenuItem>
+                                                <MenuItem eventKey="1" text="USD" >USD $</MenuItem>
+                                                <MenuItem eventKey="2" text="USD" >RMB $</MenuItem>
                                                 <MenuItem eventKey="3" >SGD $</MenuItem>
                                                 <MenuItem eventKey="3" >WON $</MenuItem>
                                                 <MenuItem eventKey="3" >RUB $</MenuItem>
@@ -105,8 +105,16 @@ class CreateFreelancer extends Component {
                                                     Active Item
                                                 </MenuItem>
                                         
-                                            </DropdownButton>
+                                            </DropdownButton> */}
+                                              <select className="rate">
+                                                <option value="usd">USD</option>
+                                                <option value="rmb">RMB</option>
+                                                <option value="sgd">SGD</option>
+                                                <option value="won">WON</option>
+                                                <option value="rub">RUB</option>
+                                            </select>
                                     </div>
+                                    
                                <div>
                                <label className="FormField__Label" htmlFor="Profile">Profile</label>
                                <Link to="#" className=""><button className="FormField__Button profile_link">Coderbunker Profile</button></Link>
