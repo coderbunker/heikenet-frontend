@@ -7,13 +7,14 @@ class CustomNavBar extends Component {
     render() {
         return (
            <Navbar default collapseOnSelect>
-            <Navbar.Header className="header">
+            <Navbar.Header>
                 <Navbar.Brand>
                     <Link to="/"><Image src="assets/logo.svg" /> HeikeNet</Link>
                 </Navbar.Brand>
+            <Navbar.Toggle /> {/* Docs say it helps for the mobile */}
             </Navbar.Header>
             <Navbar.Collapse>
-                <Nav pullRight>
+                <Nav pullRight >
                     <NavItem eventKey={1} componentClanss={Link} href="/" to='/'>
                         Home
                     </NavItem>
