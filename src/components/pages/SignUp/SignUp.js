@@ -40,6 +40,7 @@ class SignUp extends Component {
 
        localStorage.setItem('name',this.state.name);
        localStorage.setItem('email',this.state.email);
+       console.log(localStorage);
 
        axios.post('https://heikenet-backend.herokuapp.com/api/v1/register',{
             name:this.state.name,
@@ -76,7 +77,7 @@ class SignUp extends Component {
                 <div className="App__Form">
                 <div className="FormTitle">
 
-                        <NavLink exact to="/signup_form" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Join Heike Network</NavLink>
+                        <NavLink exact to="/signup" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Join Heike Network</NavLink>
                 </div>
                  <div className="FormInput">
                         <div className="FormCenter">

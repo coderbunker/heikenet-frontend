@@ -10,6 +10,7 @@ class CreateProject extends Component {
         this.state = {
             company : '',
             projectName : '',
+            website:'',
             projectDescription :'',
             budget: ''
         }
@@ -47,7 +48,7 @@ class CreateProject extends Component {
                 <div className="App__Form">
                 <div className="FormTitle">
                         {/* <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or  */}
-                        <NavLink exact to="/signup_project" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Create A Project Account</NavLink>
+                        <NavLink exact to="/create_project" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Create A Project Account</NavLink>
                 </div>
                  <div className="FormInput">
                         <div className="FormCenter">
@@ -62,7 +63,11 @@ class CreateProject extends Component {
                                     <input type="text" id="projectName" className="FormField__Input" placeholder="Enter your Project Name" name="projectName" 
                                     value={this.state.projectName} onChange={this.handleChange}/>
                                 </div>
-                              
+                                <div className="FormField">
+                                    <label className="FormField__Label" htmlFor="website">Website</label>
+                                    <input type="text" id="website" className="FormField__Input" placeholder="Enter your Website Address" name="website" 
+                                    value={this.state.website} onChange={this.handleChange}/>
+                                </div>
                                 <div className="FormField desc">
                                     <label className="FormField__Label" htmlFor="projectName">Project Description</label>
                                     <textarea rows="3" cols="50" type="text" id="projectDescription" className="FormField__Input" placeholder="Describe your Project" name="projectDescription" 

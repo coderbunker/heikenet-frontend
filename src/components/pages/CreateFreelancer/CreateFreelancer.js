@@ -73,14 +73,14 @@ class CreateFreelancer extends Component {
                 <div className="App__Form">
                 <div className="FormTitle">
                         {/* <NavLink to="/signin" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or  */}
-                        <NavLink exact to="/signup_freelancer" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Create Freelancer Account</NavLink>
+                        <NavLink exact to="/create_freelancer" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Create Freelancer Account</NavLink>
                 </div>
                  <div className="FormInput">
                         <div className="FormCenter">
                             <form className="FormField" onSubmit={this.handleSubmit} >
                                 <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="password">Wallet Address</label>
-                                    <input type="password" id="wallet_address" className="FormField__Input" placeholder="Enter your Wallet Address" 
+                                    <label className="FormField__Label" htmlFor="wallet_address">Wallet Address</label>
+                                    <input type="text" id="wallet_address" className="FormField__Input" placeholder="Enter your Wallet Address" 
                                     name="wallet_address" value={this.state.wallet_address} onChange={this.handleChange}/>
                                 </div>
                                 
