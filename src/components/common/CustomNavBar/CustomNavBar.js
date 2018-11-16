@@ -9,7 +9,7 @@ class CustomNavBar extends Component {
            <Navbar default collapseOnSelect>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <Link to="/"><Image src="assets/logo.svg" /> HeikeNet</Link>
+                    <Link to="/"><Image src="assets/logo.svg" /> Heike Network</Link>
                 </Navbar.Brand>
             <Navbar.Toggle /> {/* Docs say it helps for the mobile */}
             </Navbar.Header>
@@ -18,9 +18,9 @@ class CustomNavBar extends Component {
                     <NavItem eventKey={1} componentClanss={Link} href="/" to='/'>
                         Home
                     </NavItem>
-                    <NavItem eventKey={2} componentClanss={Link} href="/about" to='/about'>
+                   {/* <NavItem eventKey={2} componentClanss={Link} href="/about" to='/about'>
                         HeikeNet
-                    </NavItem>
+                    </NavItem> */}
                     {/* <NavItem eventKey={2} componentClanss={Link} href="/confirmpayment" to='/confirmpayment'>
                         Confirm Payment
                     </NavItem> */}
