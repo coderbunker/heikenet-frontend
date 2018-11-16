@@ -38,25 +38,20 @@ class SignUp extends Component {
        console.log('The form was submitted with the following data:');
        console.log(this.state);
 
-       axios.post('https://heike-net.herokuapp.com/api/v1/login',{
+       localStorage.setItem('name',this.state.name);
+       localStorage.setItem('email',this.state.email);
+
+       axios.post('https://heikenet-backend.herokuapp.com/api/v1/register',{
             name:this.state.name,
-            password:this.state.password,
+            email: this.state.email,
+            password:this.state.password
             // need to add more data to send to the server
     })
     
-    
     .then(function (res) {
         console.log(res);
-        
-        if(res.data === 'ok'){
-            console.log("signup success");
-            
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-        console.log('unauthorized, logging out ...');
-      })
+        console.log(res.data);
+    })
 
 
       /* need to fix redirect:false => true  */
@@ -94,7 +89,7 @@ class SignUp extends Component {
                             <form className="FormField" onSubmit={this.handleSubmit} >
                                 <div className="FormField">
                                     <label className="FormField__Label" htmlFor="email">Email</label>
-                                    <input type="email" id="email" className="FormField__Input" placeholder="Enter your email address" name="email" 
+                                    <input type="text" id="email" className="FormField__Input" placeholder="Enter your email address" name="email" 
                                     value={this.state.email} onChange={this.handleChange}/>
                                 </div>
                                 <div className="FormField">
