@@ -4,10 +4,10 @@ p {
     font-size: 15px;
 }
 
-.container{
+.container-fluid{
     height:80px !important;
     padding:13px;
-    width: 1500px !important;
+/*    width: 800px !important; */
 }
 
 .jumbotron{
@@ -17,10 +17,8 @@ p {
     height:600px;
     background-color: #364fc7;
     padding: 7% 15%;
-    font-weight: 550;
-    
 
-
+  font-weight: 600;
 }
 
 .btn-primary{
