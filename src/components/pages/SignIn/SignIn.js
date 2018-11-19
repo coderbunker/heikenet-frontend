@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SignIn.scss';
-import  {Link,NavLink,Redirect} from 'react-router-dom';
+import  {Link,NavLink} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 import axios from 'axios';
 
@@ -44,22 +44,23 @@ class SignIn extends Component {
             email:this.state.email,
             password:this.state.password,
             
+    })
             
-    }).then(function (res) {
-                console.log(res);
+            .then(function (res) {
+                console.log('response');
                 console.log(res.data);
+                if(res.data.token){
+                    window.location = "/dashboard"
+                }else if(!res.data.token){
+                    window.location = "/login"
+                  
+                    
+                }
+            
             })
-
-          
-    }
+           }
 
     render() {
-        const { redirect } = this.state;
-
-     if (redirect) {
-       return <Redirect to='/dashboard'/>;
-     }
-
         return (
             
             <div className="Background">
