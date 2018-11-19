@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  {Link,NavLink,Redirect} from 'react-router-dom';
+import  {Link,NavLink} from 'react-router-dom';
 import './SignUp.scss';
 import {Image} from 'react-bootstrap';
 import axios from 'axios';
@@ -33,13 +33,14 @@ class SignUp extends Component {
  
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({redirect:true});
+        //this.setState({redirect:true});
         
        console.log('The form was submitted with the following data:');
        console.log(this.state);
 
        localStorage.setItem('name',this.state.name);
        localStorage.setItem('email',this.state.email);
+       console.log(localStorage);
 
        axios.post('https://heikenet-backend.herokuapp.com/api/v1/register',{
             name:this.state.name,
@@ -49,24 +50,19 @@ class SignUp extends Component {
     })
     
     .then(function (res) {
-        console.log(res);
+        console.log('response');
         console.log(res.data);
+        if(res.data.id){
+            window.location = "/choose_account"
+        }else if(!res.data){
+            window.location = "/signup"
+          console.log("error")
+            
+        }
+    
     })
-
-
-      /* need to fix redirect:false => true  */
-    //   .then(()=> this.setState({redirect:true}))   
-    // console.log('The form was submitted with the following data: after redirect changed');
-    // console.log(this.state);
-       
    }
         render() {
-            const { redirect } = this.state;
-
-        if (redirect) {
-        return <Redirect to='/choose_account'/>;
-        }
-        
 
         return (
             <div className="Background">
@@ -76,7 +72,7 @@ class SignUp extends Component {
                 <div className="App__Form">
                 <div className="FormTitle">
 
-                        <NavLink exact to="/signup_form" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Join Heike Network</NavLink>
+                        <NavLink exact to="/signup" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Join Heike Network</NavLink>
                 </div>
                  <div className="FormInput">
                         <div className="FormCenter">
