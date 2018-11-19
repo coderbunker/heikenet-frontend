@@ -50,11 +50,10 @@ class SignIn extends Component {
                 console.log('response');
                 console.log(res.data);
                 if(res.data.token){
-                    window.location = "/dashboard"
-                }else if(!res.data.token){
+                    window.location = "/choose_account"
+                }else{
                     window.location = "/login"
                   
-                    
                 }
             
             })

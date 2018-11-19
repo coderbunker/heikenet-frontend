@@ -53,11 +53,12 @@ class SignUp extends Component {
         console.log('response');
         console.log(res.data);
         if(res.data.id){
-            window.location = "/choose_account"
-        }else if(!res.data){
-            window.location = "/signup"
-          console.log("error")
+            console.log("success")
+            window.location = "/signin"
             
+        }else{
+            console.log("error")
+            window.location = "/signup"
         }
     
     })
