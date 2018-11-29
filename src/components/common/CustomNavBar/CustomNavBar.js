@@ -1,9 +1,29 @@
 import React, { Component } from 'react';
 import {Navbar,Nav,NavItem,Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import { GoogleLogin } from 'react-google-login';
+import { GoogleLogout } from 'react-google-login';
+
 import './CustomNavBar.scss';
 
 class CustomNavBar extends Component {
+    state = {
+        profileObj: null,
+        loggedIn: false
+    }
+
+    login(response) {
+        console.log(response);
+        this.setState({profileObj: response.profileObj});
+        this.setState({loggedIn: true});
+    }
+
+    logout(response)  {
+        console.log(response);
+        this.setState({profileObj: null});
+        this.setState({loggedIn: false});
+    }
+
     render() {
         return (
            <Navbar default collapseOnSelect>
@@ -24,9 +44,33 @@ class CustomNavBar extends Component {
                     {/* <NavItem eventKey={2} componentClass={Link} href="/confirmpayment" to='/confirmpayment'>
                         Confirm Payment
                     </NavItem> */}
-                    <NavItem eventKey={4} componentClass={Link} href="/signin" to='/signin'>
-                        Sign In
-                    </NavItem>
+                    {
+                        <NavItem eventKey={4} componentClass={Link} href="/register" to='/register'>
+                           Register
+                        </NavItem>
+                    }
+                    {
+                        this.state.loggedIn &&
+                            <GoogleLogout
+                            buttonText="Logout"
+                            onLogoutSuccess={(e) => this.logout(e)}
+                            >
+                            </GoogleLogout>
+                    }
+                    {
+                        !this.state.loggedIn &&
+                        <GoogleLogin
+                            clientId="90022681731-dsrldqhegnt1jshje3i0opl2nlk3hfq8.apps.googleusercontent.com"
+                            buttonText="Login using your Google Account"
+                            onSuccess={(e) => this.login(e)}
+                            onFailure={(e) => this.login(e)}
+                            />    
+                    }  
+                    {
+                        (this.state.profileObj && this.state.profileObj.name) && 
+                            <div>{this.state.profileObj.name}</div>
+                    }
+   
                 </Nav>
             </Navbar.Collapse>
            </Navbar>

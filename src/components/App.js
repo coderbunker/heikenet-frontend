@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Switch,Route} from 'react-router-dom';
-import {Home,About,ChooseAccount,Dashboard,PageNotFound,SignIn,SignUp,UserAccount,CreateProject,CreateFreelancer} from 'components'
+import {Home,About,ChooseAccount,Dashboard,PageNotFound,SignIn,SignUp,UserAccount,CreateProject,CreateFreelancer,Register} from 'components'
 import Navbar from '../components/common/CustomNavBar/CustomNavBar';
 
 class App extends Component {
@@ -14,6 +14,7 @@ class App extends Component {
             <Route exact path="/about" component={About}/>
             <Route exact path="/signIn" component={SignIn}/>
             <Route exact path="/signup" component={SignUp}/>
+            <Route exact path="/register" component={Register}/>
             <Route exact path="/choose_account" component={ChooseAccount}/>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route exact path="/create_freelancer" component={CreateFreelancer}/>
