@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {Switch,Route} from 'react-router-dom';
-import {Home,About,ChooseAccount,Dashboard,PageNotFound,SignIn,SignUp,UserAccount,CreateProject,CreateFreelancer,Register} from 'components'
+import { 
+  Home, About, ChooseAccount, Dashboard, PageNotFound, SignIn, SignUp, 
+  UserAccount, CreateProject, CreateFreelancer, Register, Profile 
+} from 'components'
 import Navbar from '../components/common/CustomNavBar/CustomNavBar';
 
 class App extends Component {
@@ -20,6 +23,7 @@ class App extends Component {
             <Route exact path="/create_freelancer" component={CreateFreelancer}/>
             <Route exact path="/create_project" component={CreateProject}/>
             <Route exact path="/user_account" component={UserAccount}/>
+            <Route exact path="/profile" component={Profile}/>
           </div>
           <Route component={PageNotFound}/>
       </Switch>

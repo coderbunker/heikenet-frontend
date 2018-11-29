@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './SignIn.scss';
 import { GoogleLogin } from 'react-google-login';
-import ReactDOM from 'react-dom';
 import {Image} from 'react-bootstrap';
 
 class SignIn extends Component {

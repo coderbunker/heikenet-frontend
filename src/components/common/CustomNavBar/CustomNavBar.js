@@ -1,3 +1,4 @@
+/* global gapi */
 import React, { Component } from 'react';
 import {Navbar,Nav,NavItem,Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
@@ -50,6 +51,12 @@ class CustomNavBar extends Component {
                         </NavItem>
                     }
                     {
+                        window.gapi &&
+                        <NavItem eventKey={5} componentClass={Link} href="/profile" to='/profile'>
+                           Profile
+                        </NavItem>
+                    }
+                    {
                         this.state.loggedIn &&
                             <GoogleLogout
                             buttonText="Logout"
@@ -60,10 +67,16 @@ class CustomNavBar extends Component {
                     {
                         !this.state.loggedIn &&
                         <GoogleLogin
-                            clientId="90022681731-dsrldqhegnt1jshje3i0opl2nlk3hfq8.apps.googleusercontent.com"
+                            clientId="754813079045-187m76rpapsbeu0srek2pjb5r2cj7c6p.apps.googleusercontent.com"
                             buttonText="Login using your Google Account"
                             onSuccess={(e) => this.login(e)}
                             onFailure={(e) => this.login(e)}
+                            scope="profile email https://www.googleapis.com/auth/drive
+                            https://www.googleapis.com/auth/presentations.currentonly
+                            https://www.googleapis.com/auth/script.container.ui
+                            https://www.googleapis.com/auth/script.external_request
+                            https://www.googleapis.com/auth/spreadsheets
+                            https://www.googleapis.com/auth/userinfo.email"
                             />    
                     }  
                     {

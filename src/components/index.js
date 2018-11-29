@@ -9,3 +9,4 @@ export {SignIn} from './pages/SignIn';
 export {SignUp} from './pages/SignUp';
 export {UserAccount} from './pages/UserAccount';
 export {Register} from './pages/Register';
+export {Profile} from './pages/Profile';
