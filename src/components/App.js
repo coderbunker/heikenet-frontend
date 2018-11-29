@@ -3,10 +3,6 @@ import {Switch,Route} from 'react-router-dom';
 import {Home,About,ChooseAccount,Dashboard,PageNotFound,SignIn,SignUp,UserAccount,CreateProject,CreateFreelancer} from 'components'
 import Navbar from '../components/common/CustomNavBar/CustomNavBar';
 
-
-
-
-
 class App extends Component {
   render() {
     return (

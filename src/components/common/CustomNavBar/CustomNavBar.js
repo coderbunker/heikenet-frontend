@@ -15,16 +15,16 @@ class CustomNavBar extends Component {
             </Navbar.Header>
             <Navbar.Collapse>
                 <Nav pullRight >
-                    <NavItem eventKey={1} componentClanss={Link} href="/" to='/'>
+                    <NavItem eventKey={1} componentClass={Link} href="/" to='/'>
                         Home
                     </NavItem>
-                   {/* <NavItem eventKey={2} componentClanss={Link} href="/about" to='/about'>
-                        HeikeNet
-                    </NavItem> */}
-                    {/* <NavItem eventKey={2} componentClanss={Link} href="/confirmpayment" to='/confirmpayment'>
+                   <NavItem eventKey={2} componentClass={Link} href="/about" to='/about'>
+                        About
+                    </NavItem>
+                    {/* <NavItem eventKey={2} componentClass={Link} href="/confirmpayment" to='/confirmpayment'>
                         Confirm Payment
                     </NavItem> */}
-                    <NavItem eventKey={4} componentClanss={Link} href="/signin" to='/signin'>
+                    <NavItem eventKey={4} componentClass={Link} href="/signin" to='/signin'>
                         Sign In
                     </NavItem>
                 </Nav>
