@@ -25,6 +25,10 @@ class CustomNavBar extends Component {
         this.setState({loggedIn: false});
     }
 
+    isLoggedIn() {
+        return window.gapi && window.gapi.auth2.getAuthInstance().isSignedIn.get();
+    }
+
     render() {
         return (
            <Navbar default collapseOnSelect>
@@ -46,12 +50,13 @@ class CustomNavBar extends Component {
                         Confirm Payment
                     </NavItem> */}
                     {
+                        this.state.loggedIn &&
                         <NavItem eventKey={4} componentClass={Link} href="/register" to='/register'>
                            Register
                         </NavItem>
                     }
                     {
-                        window.gapi &&
+                        this.state.loggedIn &&
                         <NavItem eventKey={5} componentClass={Link} href="/profile" to='/profile'>
                            Profile
                         </NavItem>
@@ -80,7 +85,8 @@ class CustomNavBar extends Component {
                             />    
                     }  
                     {
-                        (this.state.profileObj && this.state.profileObj.name) && 
+                        
+                        (this.state.loggedIn && this.state.profileObj && this.state.profileObj.name) && 
                             <div>{this.state.profileObj.name}</div>
                     }
    
