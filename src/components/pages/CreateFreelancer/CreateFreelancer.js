@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {DropdownButton,MenuItem} from 'react-bootstrap';
-import  {Link,NavLink,Redirect} from 'react-router-dom';
+import  {Link,NavLink} from 'react-router-dom';
 import './CreateFreelancer.scss';
 import {Image} from 'react-bootstrap';
 import axios from 'axios';
@@ -10,12 +9,10 @@ class CreateFreelancer extends Component {
         super();
 
         this.state = {
-            email : '',
-            password : '',
+            wallet:'',            
             rate :'',
             currency :'',
-            wallet_address :'',
-            hasAgreed: false
+            info:''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -38,33 +35,28 @@ class CreateFreelancer extends Component {
         
        console.log('The form was submitted with the following data:');
        console.log(this.state);
-       axios.post('https://heike-net.herokuapp.com/api/v1/login',{
-        name:this.state.email,
-        password:this.state.password,
+       axios.post('https://heikenet-backend.herokuapp.com/api/v1/users/profiles',{
+        wallet:this.state.wallet,
+        rate:this.state.rate,
+        currency:this.state.currency,
+        info:this.state.info
+
         // need to add more data to send to the server
+    })
+        .then(function (res) {
+            console.log('response');
+            console.log(res.data);
+            if(res.data.token){
+                window.location = "/dashboard"
+            }else{
+                window.location = "/login"
+              
+            }
         
-    }).then(function (res) {
-        console.log(res);
-        
-        if(res.data === 'ok'){
-            console.log("signup success");
-            
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-        console.log('unauthorized, logging out ...');
-      });
-       
-   }
+        })
+       }
 
     render() {
-        const { redirect } = this.state;
-
-        if (redirect) {
-          return <Redirect to='/dashboard'/>;
-        }
-
         return (
             <div className="Background">
                 <div className="App__Aside">
@@ -88,24 +80,6 @@ class CreateFreelancer extends Component {
                                         <label className="FormField__Label" htmlFor="password">Rate</label>
                                         <input type="text" id="rate" className="FormField__Input Rate" placeholder="Enter your rate" name="rate" 
                                         value={this.state.rate} onChange={this.handleChange}/>
-{/*                                     
-                                            <DropdownButton 
-                                                // bsStyle={title.toLowerCase()}
-                                                // title={title}
-                                                // key={i}
-                                                // id={`dropdown-basic-${i}`}
-                                                // onSelect={this.handlSelect}
-                                                >
-                                                <MenuItem eventKey="1" text="USD" >USD $</MenuItem>
-                                                <MenuItem eventKey="2" text="USD" >RMB $</MenuItem>
-                                                <MenuItem eventKey="3" >SGD $</MenuItem>
-                                                <MenuItem eventKey="3" >WON $</MenuItem>
-                                                <MenuItem eventKey="3" >RUB $</MenuItem>
-                                                <MenuItem eventKey="4" active>
-                                                    Active Item
-                                                </MenuItem>
-                                        
-                                            </DropdownButton> */}
                                               <select className="rate">
                                                 <option value="usd">USD</option>
                                                 <option value="rmb">RMB</option>
@@ -115,10 +89,11 @@ class CreateFreelancer extends Component {
                                             </select>
                                     </div>
                                     
-                               <div>
-                               <label className="FormField__Label" htmlFor="Profile">Profile</label>
-                               <Link to="#" className=""><button className="FormField__Button profile_link">Coderbunker Profile</button></Link>
-                               </div>
+                                <div className="FormField">
+                                    <label className="FormField__Label" htmlFor="profile">Profile</label>
+                                    <input type="text" id="profile" className="FormField__Input" placeholder="Enter your profile link" 
+                                    name="profile" value={this.state.profile} onChange={this.handleChange}/>
+                                </div>
 
                                 <div className="FormField">
                                 <Link to="/dashboard"><button className="FormField__Button submit_form" type="submit">Submit Form</button></Link>
